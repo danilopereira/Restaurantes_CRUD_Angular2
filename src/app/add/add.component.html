@@ -1,0 +1,59 @@
+<div>
+    <div class="form-group">
+      <label for="especialidade">Especialidade</label>
+      <select [(ngModel)]="restaurante.especialidade" id="especialidade" class="form-control">
+        <option value="Comida Oriental">Comida Oriental</option>
+        <option value="Comida Brasileira">Comida Brasileira</option>
+        <option value="Comida Árabe">Comida Árabe</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="nome">Nome do Restaurante</label>
+      <input type="text" [(ngModel)]="restaurante.nomeFantasia" id="nome" required placeholder="Digite o nome..." class="form-control">
+		</div>
+    <div class="form-group">
+      <label for="razaoSocial">Razão Social</label>
+      <input type="text" [(ngModel)]="restaurante.razaoSocial" id="razaoSocial" required placeholder="Digite a Razão Social..." class="form-control">
+		</div>
+    <div class="form-group">
+      <label for="cnpj">CNPJ</label>
+      <input type="text" [(ngModel)]="restaurante.cnpj" id="cnpj" required placeholder="Digite o CNPJ..." class="form-control">
+		</div>
+    <div class="form-group">
+      <label for="atividade">Atividade</label>
+      <div class="input-group">
+        <input type="radio" [(ngModel)]="restaurante.atividade" id="atividade" required class="form-control" value="Ativo"> Ativo
+        <input type="radio" [(ngModel)]="restaurante.atividade" id="atividade" required class="form-control" value="Inativo">Inativo
+      </div>
+		</div>
+    <div class="form-group">
+      <label for="endereco">Endereco</label>
+      <input type="endereco" [(ngModel)]="restaurante.endereco" id="endereco" required placeholder="Digite o endereço..." class="form-control">
+		</div>
+    <div class="form-group">
+      <label for="regiao">Região</label>
+      <select [(ngModel)]="restaurante.regiao" id="regiao" class="form-control">
+        <option value="Sul">Sul</option>
+        <option value="Centro">Centro</option>
+        <option value="Leste">Leste</option>
+        <option value="Oeste">Oesete</option>
+        <option value="Norte">Norte</option>
+      </select>
+		</div>
+    <div class="form-group">
+      <label for="horarioFuncionamento">Horario de Funcionamento</label>
+      <input type="text" [(ngModel)]="restaurante.horarioFuncionamento" id="horarioFuncionamento" required placeholder="Digite o Horario de Funcionamento..." class="form-control">
+		</div>
+    <div class="form-group">
+      <label for="telefone">Telefone</label>
+      <input type="text" [(ngModel)]="restaurante.telefone" id="telefone" required placeholder="Digite o telefone..." class="form-control">
+		</div>
+    <div class="form-group">
+      <label for="gerente">Gerente ou Proprietário</label>
+      <input type="text" [(ngModel)]="restaurante.gerente" id="gerente" required placeholder="Digite o gerente..." class="form-control">
+    </div>
+    <div class="form-group">
+          <button class="btn btn-primary" (click)="save()"><div class="glyphicon glyphicon-floppy-disk"></div> Salvar restaurante</button>
+    </div>
+
+</div>

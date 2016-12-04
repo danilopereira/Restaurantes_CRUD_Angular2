@@ -1,0 +1,41 @@
+<div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>CNPJ</th>
+                        <th>Nome Fantasia</th>
+                        <th>Razão Social</th>
+                        <th>Especialidade</th>
+                        <th>Endereço</th>
+                        <th>Região</th>
+                        <th>Atividade</th>
+                        <th>Horário de Funcionamento</th>
+                        <th>Telefone</th>
+                        <th>Gerente</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let restaurante of restaurantes" [hidden]="ivisiveis[restaurante.id]">
+                        <td>{{restaurante.cnpj}}</td>
+                        <td>{{restaurante.nomeFantasia}}</td>
+                        <td>{{restaurante.razaoSocial}}</td>
+                        <td>{{restaurante.especialidade}}</td>
+                        <td>{{restaurante.endereco}}</td>
+                        <td>{{restaurante.regiao}}</td>
+                        <td>{{restaurante.atividade}}</td>
+                        <td>{{restaurante.horarioFuncionamento}}</td>
+                        <td>{{restaurante.telefone}}</td>
+                        <td>{{restaurante.gerente}}</td>
+                        <td>
+                          <button class="delete"><div class="glyphicon glyphicon-trash" (click)="del(restaurante)"></div></button>
+                        </td>
+                        <td>
+                          <button class="edit"><div class="glyphicon glyphicon-pencil" (click)="edit(restaurante)"></div></button>
+                        </td>
+                   </tr>
+                </tbody>
+              </table>
+</div>
+<button class="btn btn-primary" (click)="add()"><div class="glyphicon glyphicon-plus"></div> Adicionar Restaurante</button>
